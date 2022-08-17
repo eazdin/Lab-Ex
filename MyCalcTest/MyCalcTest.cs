@@ -80,6 +80,7 @@ namespace LabEx
          [DataRow(10,2,5)]
          [DataRow(10,3,3)]
          [DataRow(900,30,30)]
+         [DataRow(9,30,270)]
         public void TestDataDivMethod(int a,int b,int expectedresult)
         {
             int result = MyCalc.Div(a,b);
