@@ -56,12 +56,23 @@ namespace LabEx
         }
 
         [DataTestMethod]
-         [DataRow(10,20,30)]
+         [DataRow(50,20,30)]
          [DataRow(10,30,40)]
-         [DataRow(20,30,40)]
+         [DataRow(70,30,40)]
         public void TestDataSubMethod(int a,int b,int expectedresult)
         {
             int result = MyCalc.Sub(a,b);
+            Assert.AreEqual(expectedresult,result,"Test Method Fail");
+        }
+
+         [DataTestMethod]
+         [DataRow(10,2,20)]
+         [DataRow(10,3,30)]
+         [DataRow(70,30,40)]
+         [DataRow(10,30,300)]
+        public void TestDataMulMethod(int a,int b,int expectedresult)
+        {
+            int result = MyCalc.Mul(a,b);
             Assert.AreEqual(expectedresult,result,"Test Method Fail");
         }
     }
