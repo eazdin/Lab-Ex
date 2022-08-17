@@ -52,7 +52,7 @@ namespace LabEx
         public void TestDataAddMethod(int a,int b,int expectedresult)
         {
             int result = MyCalc.Add(a,b);
-            Assert.AreEqual(expectedresult,result,"Test Method Fail");
+            Assert.AreEqual(expectedresult,result,"AddTest Method Fail");
         }
 
         [DataTestMethod]
@@ -62,7 +62,7 @@ namespace LabEx
         public void TestDataSubMethod(int a,int b,int expectedresult)
         {
             int result = MyCalc.Sub(a,b);
-            Assert.AreEqual(expectedresult,result,"Test Method Fail");
+            Assert.AreEqual(expectedresult,result,"SubTest Method Fail");
         }
 
          [DataTestMethod]
@@ -73,7 +73,17 @@ namespace LabEx
         public void TestDataMulMethod(int a,int b,int expectedresult)
         {
             int result = MyCalc.Mul(a,b);
-            Assert.AreEqual(expectedresult,result,"Test Method Fail");
+            Assert.AreEqual(expectedresult,result,"MulTest Method Fail");
+        }
+
+        [DataTestMethod]
+         [DataRow(10,2,5)]
+         [DataRow(10,3,3)]
+         [DataRow(900,30,30)]
+        public void TestDataDivMethod(int a,int b,int expectedresult)
+        {
+            int result = MyCalc.Div(a,b);
+            Assert.AreEqual(expectedresult,result,"DivTest Method Fail");
         }
     }
     }
