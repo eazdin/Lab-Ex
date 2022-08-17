@@ -85,6 +85,16 @@ namespace LabEx
             int result = MyCalc.Div(a,b);
             Assert.AreEqual(expectedresult,result,"DivTest Method Fail");
         }
+
+         [DataTestMethod]
+         [DataRow(10,2,100)]
+         [DataRow(2,3,8)]
+         [DataRow(9,3,31)]
+        public void TestDatapowMethod(int a,int b,int expectedresult)
+        {
+            int result = MyCalc.pow(a,b);
+            Assert.AreEqual(expectedresult,result,"powTest Method Fail");
+        }
     }
     }
 
