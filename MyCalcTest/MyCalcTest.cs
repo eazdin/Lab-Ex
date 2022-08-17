@@ -59,6 +59,7 @@ namespace LabEx
          [DataRow(50,20,30)]
          [DataRow(10,30,40)]
          [DataRow(70,30,40)]
+         [DataRow(70,30,40)]
         public void TestDataSubMethod(int a,int b,int expectedresult)
         {
             int result = MyCalc.Sub(a,b);
