@@ -45,14 +45,17 @@ namespace LabEx
         //     Assert.AreEqual(expectedresult,result,"Test Method Fail");
         // }
 
-         [DataTestMethod]
-         [DataRow(10,20,30)]
-         [DataRow(10,30,40)]
-         [DataRow(20,30,40)]
+        [DataTestMethod]
+        [DataRow(10,20,30)]
+        [DataRow(10,30,40)]
+        [DataRow(20,30,50)]
+        [DataRow(20,30,40)]
+        
         public void TestDataAddMethod(int a,int b,int expectedresult)
         {
             int result = MyCalc.Add(a,b);
-            Assert.AreEqual(expectedresult,result,"AddTest Method Fail");
+            //Assert.AreEqual(expectedresult,result,"AddTest Method Fail");
+            Assert.AreNotEqual(expectedresult,result,"AddTest Method pass");
         }
 
         [DataTestMethod]
